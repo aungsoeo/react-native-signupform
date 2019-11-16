@@ -41,7 +41,7 @@ export default class App extends React.Component {
           password:""
       });
     }else{
-      alert("Please all the required field!");
+      alert("Please fill all the required field!");
     }
   };
 
