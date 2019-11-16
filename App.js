@@ -32,18 +32,22 @@ export default class App extends React.Component {
       // here place your signup logic
       alert("User successfully signed up!");
       // console.log("user successfully signed up!: ",this.state);
-      this.setState({
-          choosenValue: "",
-          choosenIndex: "",
-          switchValue : false,
-          name:"",
-          username:"",
-          password:""
-      });
+      this.clearState();
     }else{
       alert("Please fill all the required field!");
     }
   };
+
+  clearState(){
+    this.setState({
+      choosenValue: "",
+      choosenIndex: "",
+      switchValue : false,
+      name:"",
+      username:"",
+      password:""
+  });
+  }
 
   toggleSwitch = value =>{
     this.setState({ switchValue: value});
