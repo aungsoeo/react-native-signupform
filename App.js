@@ -28,22 +28,21 @@ export default class App extends React.Component {
   };
   signUp = async () => {
     const myObjStr = JSON.stringify(this.state);
-    try {
+    if(this.state.name!='' && this.state.username!='' && this.state.password!='') {
       // here place your signup logic
       alert("User successfully signed up!");
       // console.log("user successfully signed up!: ",this.state);
-    } catch (err) {
-      console.log("error signing up: ", err);
+      this.setState({
+          choosenValue: "",
+          choosenIndex: "",
+          switchValue : false,
+          name:"",
+          username:"",
+          password:""
+      });
+    }else{
+      alert("Please all the required field!");
     }
-
-    this.setState({
-        choosenValue: "",
-        choosenIndex: "",
-        switchValue : false,
-        name:"",
-        username:"",
-        password:""
-    });
   };
 
   toggleSwitch = value =>{
