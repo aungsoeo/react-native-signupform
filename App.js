@@ -64,7 +64,7 @@ export default class App extends React.Component {
     ]
     return (
       <View style={styles.container}>
-        <KeyboardAvoidingView>
+       <KeyboardAvoidingView style={ styles.container} behavior="padding" enabled>
           <View style={styles.formContainer}>
         <Text style={styles.label}>Name</Text>
         <TextInput
